@@ -8,17 +8,3 @@ const setUserRolesOnSignUp = (userId, info) => {
 AccountsTemplates.configure({
   postSignUpHook: setUserRolesOnSignUp,
 });
-
-
-// Meteor.startup(() => {
-//   ServiceConfiguration.configurations.update(
-//     { "service": "facebook" },
-//     {
-//       $set: {
-//         "appId": "XXXXXXXXXXXXXXX",
-//         "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-//       }
-//     },
-//     { upsert: true }
-//   );
-// });

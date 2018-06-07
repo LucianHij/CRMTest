@@ -3,13 +3,13 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import { AccountsTemplates } from 'meteor/useraccounts:core';
 
 import '/imports/ui/layouts/app-body.js';
-import '/imports/ui/pages/app-not-found.js';
-import '/imports/ui/pages/app-timeline.js';
+import '/imports/ui/pages/app-not-found/app-not-found.js';
+import '/imports/ui/pages/app-dashboard/app-dashboard.js';
 
 FlowRouter.route('/', {
-  name: 'App_timeline',
+  name: 'App_CRM',
   action() {
-    BlazeLayout.render('App_body', { main: 'App_timeline' });
+    BlazeLayout.render('App_body', { main: 'App_CRM' });
   },
 });
 

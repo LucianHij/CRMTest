@@ -19,8 +19,6 @@ percolate:momentum
 
 # data
 mongo@1.1.14
-aldeed:simple-schema
-aldeed:collection2
 dburles:collection-helpers
 reywood:publish-composite
 mdg:validated-method
@@ -72,3 +70,4 @@ dispatch:mocha-phantomjs
 practicalmeteor:mocha@2.1.1-rc.1
 msavin:mongol
 shell-server@0.2.1
+aldeed:collection2-core

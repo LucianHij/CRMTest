@@ -22,14 +22,12 @@ AccountsTemplates.configure({
   positiveValidation: true,
   positiveFeedback: true,
   showValidating: true,
-  privacyUrl: 'Privacy',
-  termsUrl: 'TermsOfUse',
   redirectTimeout: 0,
   texts: {
     button: {
-      signUp: 'Create my Profil'
+      signUp: 'Create my Profile'
     },
-    socialSignUp: 'Create my Profil',
+    socialSignUp: 'Create my Profile',
     socialIcons: {
       'meteor-developer': 'fa fa-rocket'
     },
