@@ -1,0 +1,44 @@
+<template name="customers">
+  {{#if equals isLoading true}}
+    {{> App_loading}}
+  {{/if}}
+  {{#if equals isLoading false }}
+    <div class="pull-right">
+      <a href="{{pathFor 'customer-add'}}" class="btn btn-primary">Add</a>
+    </div>
+    <div class="container">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Age</th>
+          <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each cust in documents}}
+          <tr>
+            <td>{{cust.firstName}}</td>
+            <td>{{cust.lastName}}</td>
+            <td>{{cust.email}}</td>
+            <td>{{cust.age}}</td>
+            <td>
+              <a href="/customer-edit/{{cust._id}}" class="btn btn-default">Edit</a>
+            </td>
+          </tr>
+        {{else}}
+          <tr>
+            <td colspan="100">
+              No data found!
+            </td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  {{/if}}
+  {{> defaultBootstrapPaginator pagination=templatePagination limit=2 containerClass="text-center" onClick=clickEvent}}
+</template>

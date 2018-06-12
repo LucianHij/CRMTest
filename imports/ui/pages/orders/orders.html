@@ -1,0 +1,39 @@
+<template name="orders">
+  {{#if equals isLoading true}}
+    {{> App_loading}}
+  {{/if}}
+  {{#if equals isLoading false }}
+    <div class="pull-right">
+      <a href="{{pathFor 'order-add'}}" class="btn btn-primary">Add</a>
+    </div>
+    <div class="container">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Name</th>
+          <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each order in ordersList}}
+          <tr>
+            <td>{{order.code}}</td>
+            <td>{{order.name}}</td>
+            <td>
+              <a href="/order-edit/{{order._id}}" class="btn btn-default">Edit</a>
+            </td>
+          </tr>
+        {{else}}
+          <tr>
+            <td colspan="100">
+              No data found!
+            </td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  {{/if}}
+</template>

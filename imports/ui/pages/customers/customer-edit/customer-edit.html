@@ -1,0 +1,12 @@
+<template name="editCustomerForm">
+  {{#autoForm collection="Customers" doc=customerDoc id="editCustomerForm" type="update"}}
+    <fieldset>
+      <legend>Edit a customer</legend>
+      {{> afQuickField name='firstName'}}
+      {{> afQuickField name='lastName'}}
+      {{> afQuickField name='email'}}
+      {{> afQuickField name='age'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  {{/autoForm}}
+</template>

@@ -13,6 +13,10 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="{{isActiveRoute 'App_CRM'}}"><a href="{{pathFor 'App_CRM'}}">{{_ 'Dashboard'}} <span class="sr-only">(current)</span></a></li>
+          {{#if currentUser}}
+            <li class="{{isActiveRoute 'customers'}}"><a href="{{pathFor 'customers'}}" class="btn-secondary">{{_ 'Customers'}}</a></li>
+            <li class="{{isActiveRoute 'orders'}}"><a href="{{pathFor 'orders'}}" class="btn-secondary">{{_ 'Orders'}}</a></li>
+          {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{#if currentUser}}

@@ -1,0 +1,12 @@
+<template name="insertCustomerForm">
+  {{#autoForm collection="Customers" id="insertCustomerForm" type="insert"}}
+    <fieldset>
+      <legend>Add a customer</legend>
+      {{> afQuickField name='firstName'}}
+      {{> afQuickField name='lastName'}}
+      {{> afQuickField name='email'}}
+      {{> afQuickField name='age'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  {{/autoForm}}
+</template>

@@ -1,0 +1,10 @@
+<template name="insertOrderForm">
+  {{#autoForm collection="Orders" id="insertOrderForm" type="insert"}}
+    <fieldset>
+      <legend>Add an order</legend>
+      {{> afQuickField name='code'}}
+      {{> afQuickField name='name'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  {{/autoForm}}
+</template>
